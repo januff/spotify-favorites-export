@@ -2,12 +2,6 @@ Building out a Spotify Authorization Code flow using Remix and paginated GraphQL
 
 <br/>
 
-<p align="center">
-  <img width="450" src="././images/tunemymusic.png"/>
-</p>
-
-<br/>
-
 - **[How Portable Is Spotify?](draft.md): Exporting My Saved Music**
 
 
@@ -16,7 +10,9 @@ Building out a Spotify Authorization Code flow using Remix and paginated GraphQL
 <br/>
 
 <p align="center">
-  <img width="450" src="././images/subscription.png"/>
+  <img width="230" src="././images/tunemymusic.png"/>
+  <img width="300" src="././images/subscription.png"/>
+  
 </p>
 
 <br/>
