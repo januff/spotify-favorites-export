@@ -8,7 +8,7 @@ Building out a Spotify Authorization Code flow using Remix and complex API queri
 <br/>
 
 <p align="center">
-  <img src="././images/oauthflow.png"/>
+  <img src="././images/subscription.png"/>
 </p>
 
 <br/>
