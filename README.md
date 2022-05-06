@@ -1,5 +1,13 @@
 Building out a Spotify Authorization Code flow using Remix and paginated GraphQL queries using StepZen.
 
+<br/>
+
+<p align="center">
+  <img width="450" src="././images/tunemymusic.png"/>
+</p>
+
+<br/>
+
 - **[How Portable Is Spotify?](draft.md): Exporting My Saved Music**
 
 
@@ -22,7 +30,7 @@ Building out a Spotify Authorization Code flow using Remix and paginated GraphQL
 <br/>
 
 <p align="center">
-  <img width="450" src="././images/newline.png"/>
+  <img width="400" src="././images/oauthflow.png"/>
 </p>
 
 <br/>
@@ -34,3 +42,9 @@ Building out a Spotify Authorization Code flow using Remix and paginated GraphQL
   > Two major modifications we'll be making to Brittany's code will be 1. adapting the OAuth flow to use Remix's routing and 2. orchestrating the multiple API calls for user info with StepZen rather than Axios (and focusing our query on Liked Songs.)
 
 <br/>
+
+<p align="center">
+  <img width="450" src="././images/newline.png"/>
+</p>
+
+<br/>tunemymusic
