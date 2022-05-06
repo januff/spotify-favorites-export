@@ -8,7 +8,7 @@ Building out a Spotify Authorization Code flow using Remix and complex API queri
 <br/>
 
 <p align="center">
-  <img width="300" src="././images/subscription.png"/>
+  <img width="450" src="././images/subscription.png"/>
 </p>
 
 <br/>
@@ -22,7 +22,7 @@ Building out a Spotify Authorization Code flow using Remix and complex API queri
 <br/>
 
 <p align="center">
-  <img width="300" src="././images/newline.png"/>
+  <img width="450" src="././images/newline.png"/>
 </p>
 
 <br/>
