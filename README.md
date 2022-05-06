@@ -15,7 +15,7 @@ Building out a Spotify Authorization Code flow and complex API queries, using Re
 <br/>
 
 <p align="center">
-  <img src="././images/spotifywithtoken.png"/>
+  <img src="././images/oauthflow.png"/>
 </p>
 
 <br/>
