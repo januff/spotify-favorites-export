@@ -1,4 +1,4 @@
-Building out a Spotify Authorization Code flow using Remix and complex API queries using StepZen.
+Building out a Spotify Authorization Code flow using Remix and paginated GraphQL queries using StepZen.
 
 - **[How Portable Is Spotify?](draft.md): Exporting My Saved Music**
 
