@@ -1,6 +1,6 @@
 Building out a Spotify Authorization Code flow and complex API queries, using Remix and Stepzen.
 
-- **[How Portable Is Spotify?](draft.md): Retrieving Personal **
+- **[How Portable Is Spotify?](draft.md): Exporting My Saved Music**
 
 
   > I was disappointed to discover, when I tried to migrate my playlists to Tidal, that the free versions of both recommended transfer apps have 250-song restrictions.
