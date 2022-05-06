@@ -35,7 +35,9 @@ Building out a Spotify Authorization Code flow using Remix and paginated GraphQL
 - **[Build A Spotify Connected App](https://www.newline.co/courses/build-a-spotify-connected-app): Learn how to build a full stack web app to visualize personalized Spotify data with the help of Node.js, React, Styled Components, and the Spotify Web API.**
 
 
-  > Two major modifications we'll be making to Brittany's code will be 1. adapting the OAuth flow to use Remix's routing and 2. orchestrating the multiple API calls for user info with StepZen rather than Axios (and focusing our query on Liked Songs.)
+  > Credit mainly to Brittany Chiang, whose recent newline.co course Build a Spotify Connect App (free online at the moment) is a concise masterclass in best practices for REST API client-building. (And whose code and architecture I'll be replicating as much as possible.)
+  >
+  > The two main modifications we'll be making to Brittany's code will be 1. adapting the OAuth flow to use Remix's routing and 2. orchestrating the multiple API calls for user info with StepZen rather than Axios (and focusing our query on Liked Songs.)
 
 <br/>
 
