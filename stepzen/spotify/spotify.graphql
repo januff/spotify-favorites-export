@@ -1,0 +1,192 @@
+type Spotify_Auth {
+  access_token: String
+  token_type: String
+  expires_in: Int
+  refresh_token: String
+  scope: String
+}
+
+type Query {
+  get_token_with_code(
+    code: String!
+  ): Spotify_Auth
+    @rest(
+      configuration: "spotify_config"
+      method: POST
+      contenttype: "application/x-www-form-urlencoded"
+      endpoint: "https://accounts.spotify.com/api/token?code=$code&grant_type=authorization_code&redirect_uri=http://localhost:3000/callback"
+      headers: [{
+        name: "Authorization",
+        value: "Basic $buffer"
+      }]
+    )
+}
+
+type Track {
+  added_at: String
+  track_id: String
+  track_name: String
+  artist_id: String
+  artist_name: String
+  popularity: Int
+  preview_url: String
+  isrc: String
+}
+
+type TrackEdge {
+  node: Track
+  cursor: String
+}
+
+type TrackConnection {
+  pageInfo: PageInfo!
+  edges: [TrackEdge]
+}
+
+type Query {
+  get_saved_tracks(
+    access_token: String!
+    first: Int! = 50
+    after: String! = ""
+  ): TrackConnection
+    @rest(
+      endpoint: "https://api.spotify.com/v1/me/tracks?limit=$first&offset=$after"
+      headers: [{
+        name: "Authorization",
+        value: "Bearer $access_token"
+      }]
+      resultroot: "items[]"
+      pagination: {
+        type: OFFSET
+        setters: [{field:"total", path: "total"}]
+      }
+      setters: [
+        { field: "track_id", path: "track.id" }
+        { field: "track_name", path: "track.name" }
+        { field: "artist_id", path: "track.artists[].id" }
+        { field: "artist_name", path: "track.artists[].name" }
+        { field: "popularity", path: "track.popularity" }
+        { field: "preview_url", path: "track.preview_url" }
+        { field: "isrc", path: "track.external_ids.isrc" }
+      ]
+    )
+}
+
+# Not currently using these
+
+type Spotify_User {
+  id: String
+  display_name: String
+}
+
+type Spotify_Slim {
+  id: String
+  display_name: String
+  access_token: String
+  playlists: [Playlist]
+    @materializer(
+      query: "get_playlists"
+    )
+  saved_Tracks: TrackConnection
+    @materializer(
+      query: "get_saved_tracks"
+    )
+  }
+
+type Spotify_Account {
+  id: String
+  display_name: String
+  access_token: String
+  token_type: String
+  expires_in: Int
+  refresh_token: String
+  scope: String
+  playlists: [Playlist]
+    @materializer(
+      query: "get_playlists"
+    )
+  saved_Tracks: TrackConnection
+    @materializer(
+      query: "get_saved_tracks"
+    )
+}
+
+type Playlist {
+  id: String
+  name: String
+}
+
+type Query {
+  spotify_user_sequence(
+    code: String!
+  ): Spotify_Account
+    @sequence(
+      steps: [
+        { query: "get_token_with_code" }
+        { query: "get_user_info" }
+        { query: "collect" }
+      ]
+    )
+}
+
+type Query {
+  spotify_token_sequence(
+    access_token: String!
+  ): Spotify_Slim
+    @sequence(
+      steps: [
+        { query: "get_user_info" }
+        { query: "collect"}
+      ]
+    )
+}
+
+type Query {
+  get_user_info(
+    access_token: String!
+  ): Spotify_User
+    @rest(
+      endpoint: "https://api.spotify.com/v1/me/"
+      headers: [{
+        name: "Authorization",
+        value: "Bearer $access_token"
+      }]
+    )
+}
+
+type Query {
+  get_playlists(
+    access_token: String!
+  ): [Playlist]
+    @rest(
+      endpoint: "https://api.spotify.com/v1/me/playlists"
+      headers: [{
+        name: "Authorization",
+        value: "Bearer $access_token"
+      }]
+      resultroot: "items[]"
+    )
+}
+
+
+# type Query {
+#   collect (
+#     id: String,
+#     display_name: String,
+#     access_token: String,
+#     token_type: String,
+#     expires_in: Int,
+#     refresh_token: String,
+#     scope: String,
+#   ): Spotify_Account
+#     @connector (type: "echo")
+# }
+
+type Query {
+  collect (
+    id: String,
+    display_name: String,
+    access_token: String,
+  ): Spotify_Slim
+    @connector (type: "echo")
+}
