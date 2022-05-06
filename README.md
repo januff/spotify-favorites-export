@@ -3,7 +3,7 @@ Building out a Spotify Authorization Code flow using Remix and paginated GraphQL
 - **[How Portable Is Spotify?](draft.md): Exporting My Saved Music**
 
 
-  > I was disappointed to discover, when I tried to migrate my playlists to Tidal, that the free versions of both recommended transfer apps have 250-song restrictions–and the paid versions are subscription apps. Given a choice, I'd rather not enroll in a monthly subscription to what would likely be a single-use app.
+  > I was disappointed to discover, when I tried to migrate my playlists to Tidal, that the free versions of both recommended transfer apps have 250-song restrictions–and the paid versions are subscription apps. Given a choice, I'd rather not enroll in a monthly subscription to a (likely) single-use app.
 
 <br/>
 
