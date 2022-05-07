@@ -5,7 +5,7 @@ During the recent Spotify protests, the ease with which one could transfer Spoti
 
 I'm not above dishing out a few bucks for the sake of convenience, but given my recent workouts with the Spotify API, I couldn't help but wonder: just how much less convenient would building a personal playlist exporter really be?
 
-Make no mistake: for you it'll be super-convenient–assuming you're comfortable with React and at least curious about Remix–since I've reduced the process to just two problem sequences, detailed below. (Also, one can still freely access playlist and other info after deactivating a premium Spotify membership.)
+Make no mistake: for you it'll be a breeze–assuming you're comfortable with React and at least curious about Remix–since I've reduced the process to just two problem sequences, detailed below. (Also, one can still freely access playlist and other info after deactivating a premium Spotify membership.)
 
 But it wasn't horribly inconvenient for me, either–credit mainly to Brittany Chiang, whose recent newline.co course Build a Spotify Connect App (free online at the moment) is a concise masterclass in best practices for REST API client-building. (And whose code and architecture I used as a starting point.)
 
