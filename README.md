@@ -5,9 +5,6 @@
   <img width="500" src="././images/login.png"/>  
 </p>
 
-
-<br/>
-
 - **[How Portable Is Spotify?](overview.md): Exporting My Saved Music**
 
 
