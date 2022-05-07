@@ -14,8 +14,6 @@
 
 <br/>
 
-<br/>
-
 <p align="center">
   <img width="230" src="././images/tunemymusic.png"/>
   <img width="300" src="././images/subscription.png"/>
