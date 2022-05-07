@@ -22,9 +22,9 @@
 
 <!-- <p align="center">
   <img width="400" src="././images/oauthflow.png"/>
-</p>
+</p>-->
 
-<br/> -->
+<br/> 
 
 - **[A Spotify OAuth flow in Remix](authflow.md): Using CookieSessionStorage**
 
