@@ -2,7 +2,7 @@
 #### A Spotify Authorization Code flow using Remix and paginated GraphQL queries using StepZen.
 
 <p align="center">
-  <img width="400" src="././images/login.png"/>  
+  <img width="500" src="././images/login.png"/>  
 </p>
 
 
