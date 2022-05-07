@@ -1,6 +1,7 @@
 <p align="center">
   <img width="500" src="././images/login.png"/>  
 </p>
+
 ## Spotify Liked Songs Export
 #### A Spotify Authorization Code flow using Remix and paginated GraphQL queries using StepZen.
 
