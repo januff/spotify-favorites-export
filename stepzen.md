@@ -1,3 +1,5 @@
+**Designing a Spotify GraphQL schema with StepZen: Paginating results**
+
 Text goes here.
 
 ```graphql
@@ -177,5 +179,5 @@ export default function Tracks() {
 <br/>
 
 <p align="center">
-  <img width="230" src="././images/songs.png"/>  
+  <img width="450" src="././images/songs.png"/>  
 </p>
