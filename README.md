@@ -1,17 +1,9 @@
-<p align="center">
-  <img width="500" src="././images/login.png"/>  
-</p>
 
 ## Spotify Liked Songs Export
 #### A Spotify Authorization Code flow using Remix and paginated GraphQL queries using StepZen.
 
-
-<br/>
-
 <p align="center">
-  <img width="230" src="././images/tunemymusic.png"/>
-  <img width="300" src="././images/subscription.png"/>
-  
+  <img width="500" src="././images/login.png"/>  
 </p>
 
 - **[How Portable Is Spotify?](overview.md): Exporting My Saved Music**
@@ -22,48 +14,24 @@
 
 <br/>
 
+<br/>
+
 <p align="center">
+  <img width="230" src="././images/tunemymusic.png"/>
+  <img width="300" src="././images/subscription.png"/>
+  
+</p>
+
+<!-- <p align="center">
   <img width="400" src="././images/oauthflow.png"/>
 </p>
 
-<br/>
+<br/> -->
 
 - **[A Spotify OAuth flow in Remix](authflow.md): Using CookieSessionStorage**
 
 
   > Where @materializer allows us to step through our API requests in implicit order, simply by descending through our type fields and back-filling secondary data, @sequence lets us step through API requests in explicit order. 
-
-
-```graphql
-type Query {
-  get_saved_tracks(
-    access_token: String!
-    first: Int! = 50
-    after: String! = ""
-  ): TrackConnection
-    @rest(
-      endpoint: "https://api.spotify.com/v1/me/tracks?limit=$first&offset=$after"
-      headers: [{
-        name: "Authorization",
-        value: "Bearer $access_token"
-      }]
-      resultroot: "items[]"
-      pagination: {
-        type: OFFSET
-        setters: [{field:"total", path: "total"}]
-      }
-      setters: [
-        { field: "track_id", path: "track.id" }
-        { field: "track_name", path: "track.name" }
-        { field: "artist_id", path: "track.artists[].id" }
-        { field: "artist_name", path: "track.artists[].name" }
-        { field: "popularity", path: "track.popularity" }
-        { field: "preview_url", path: "track.preview_url" }
-        { field: "isrc", path: "track.external_ids.isrc" }
-      ]
-    )
-}
-```
 
 
 - **[Designing a Spotify GraphQL schema with StepZen](stepzen.md): Paginating results**
@@ -75,7 +43,7 @@ type Query {
 <br/>
 
 <p align="center">
-  <img width="450" src="././images/newline.png"/>
+  <img width="350" src="././images/newline.png"/>
 </p>
 
 <br/>
