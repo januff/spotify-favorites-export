@@ -1,4 +1,11 @@
-Building out a Spotify Authorization Code flow using Remix and paginated GraphQL queries using StepZen.
+## Spotify Liked Songs Export
+#### A Spotify Authorization Code flow using Remix and paginated GraphQL queries using StepZen.
+
+<p align="center">
+  <img width="400" src="././images/login.png"/>  
+</p>
+
+
 <br/>
 
 - **[How Portable Is Spotify?](overview.md): Exporting My Saved Music**
@@ -8,15 +15,15 @@ Building out a Spotify Authorization Code flow using Remix and paginated GraphQL
 
 <br/>
 
+<br/>
+
 <p align="center">
   <img width="230" src="././images/tunemymusic.png"/>
   <img width="300" src="././images/subscription.png"/>
   
 </p>
 
-<br/>
-
-- **[Designing a Spotify GraphQL schema with StepZen](stepzen.md): Paginating results**
+- **[A Spotify OAuth flow in Remix](stepzen.md): Using CookieSessionStorage**
 
 
   > Where @materializer allows us to step through our API requests in implicit order, simply by descending through our type fields and back-filling secondary data, @sequence lets us step through API requests in explicit order. 
@@ -31,6 +38,20 @@ Building out a Spotify Authorization Code flow using Remix and paginated GraphQL
 <br/>
 
 
+- **[Designing a Spotify GraphQL schema with StepZen](stepzen.md): Paginating results**
+
+
+  > Where @materializer allows us to step through our API requests in implicit order, simply by descending through our type fields and back-filling secondary data, @sequence lets us step through API requests in explicit order. 
+
+
+<br/>
+
+<p align="center">
+  <img width="450" src="././images/newline.png"/>
+</p>
+
+<br/>
+
 - **[Build A Spotify Connected App](https://www.newline.co/courses/build-a-spotify-connected-app): Learn how to build a full stack web app to visualize personalized Spotify data with the help of Node.js, React, Styled Components, and the Spotify Web API.**
 
 
@@ -39,9 +60,3 @@ Building out a Spotify Authorization Code flow using Remix and paginated GraphQL
   > The two main modifications we'll be making to Brittany's code will be 1. adapting the OAuth flow to use Remix's routing and 2. orchestrating the multiple API calls for user info with StepZen rather than Axios (and focusing our query on Liked Songs.)
 
 <br/>
-
-<p align="center">
-  <img width="450" src="././images/newline.png"/>
-</p>
-
-<br/>tunemymusic
