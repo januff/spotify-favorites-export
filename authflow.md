@@ -1,3 +1,5 @@
+**A Spotify OAuth flow in Remix: Using CookieSessionStorage**
+
 The first step in Spotify's Auth flow requires you to redirect the user to Spotify, after which Spotify will redirect the user right back to you, along with a code. 
 
 ```js
@@ -76,7 +78,7 @@ In the Loader for my <code>/callback</code>, I grab the <code>code</code> from t
 ```
 
 
-That token is immediately extracted, set as a Cookie using <code>getSessions</code>, and persisted server-side using <code>commitSession</code>.
+That token is immediately extracted, set as a Cookie using <code>getSession</code>, and persisted server-side using <code>commitSession</code>.
 
 ```js
   // remix > app > routes > callback.tsx

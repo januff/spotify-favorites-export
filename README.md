@@ -23,7 +23,7 @@
 - **[A Spotify OAuth flow in Remix](authflow.md): Using CookieSessionStorage**
 
 
-  > Where @materializer allows us to step through our API requests in implicit order, simply by descending through our type fields and back-filling secondary data, @sequence lets us step through API requests in explicit order. 
+  > In the Loader for my <code>/callback</code>, I grab the <code>code</code> from the url and query an access token using the Fetch API. That token is immediately extracted, set as a Cookie using <code>getSession</code>, and persisted server-side using <code>commitSession</code>.
 
 
 <br/> 
