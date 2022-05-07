@@ -1,4 +1,4 @@
-Text goes here.
+The first step in Spotify's Auth flow requires you to redirect the user to Spotify, after which Spotify will itself redirect with a code.
 
 ```js
 // remix > app > routes > login.tsx
