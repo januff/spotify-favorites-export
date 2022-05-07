@@ -20,7 +20,7 @@
   
 </p>
 
-- **[A Spotify OAuth flow in Remix](stepzen.md): Using CookieSessionStorage**
+- **[A Spotify OAuth flow in Remix](authflow.md): Using CookieSessionStorage**
 
 
   > Where @materializer allows us to step through our API requests in implicit order, simply by descending through our type fields and back-filling secondary data, @sequence lets us step through API requests in explicit order. 
