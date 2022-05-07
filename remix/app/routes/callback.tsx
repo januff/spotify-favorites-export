@@ -1,3 +1,5 @@
+// remix > app > routes > callback.tsx
+
 import { redirect } from "remix";
 import type { LoaderFunction } from "remix";
 import { getSession, commitSession } from "../sessions";

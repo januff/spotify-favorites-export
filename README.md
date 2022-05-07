@@ -1,6 +1,6 @@
 
 ## Spotify Liked Songs Export
-#### A Spotify Authorization Code flow using Remix and paginated GraphQL queries using StepZen.
+#### A Spotify OAuth Code flow using Remix and GraphQL-as-a-service using StepZen.
 
 <p align="center">
   <img width="500" src="././images/login.png"/>  
@@ -20,16 +20,17 @@
   
 </p>
 
-<!-- <p align="center">
-  <img width="400" src="././images/oauthflow.png"/>
-</p>-->
-
-<br/> 
-
 - **[A Spotify OAuth flow in Remix](authflow.md): Using CookieSessionStorage**
 
 
   > Where @materializer allows us to step through our API requests in implicit order, simply by descending through our type fields and back-filling secondary data, @sequence lets us step through API requests in explicit order. 
+
+
+<br/> 
+
+<p align="center">
+  <img width="400" src="././images/oauthflow.png"/>
+</p>
 
 
 - **[Designing a Spotify GraphQL schema with StepZen](stepzen.md): Paginating results**
