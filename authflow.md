@@ -17,6 +17,8 @@ export const loader: LoaderFunction = async ({
 Text goes here. 
 
 ```graphql
+// stepzen > spotify > spotify.graphql
+
 type Spotify_Auth {
   access_token: String
   token_type: String
