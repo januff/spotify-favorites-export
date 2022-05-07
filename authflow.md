@@ -95,7 +95,7 @@ That token is immediately extracted, set as a Cookie using <code>getSessions</co
     }
 ```
 
-Which will make the <code>access_token</code> subsequently available to the loader at my <code>/tracks</code> route, to which we can redirect immediately
+Which will make the <code>access_token</code> subsequently available to the loader at any route. Like my <code>/tracks</code> route, to which we can now redirect immediately.
 
 ```js
 // remix > app > routes > callback.tsx
