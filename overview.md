@@ -15,4 +15,4 @@ The two main modifications I made to Brittany's code were 1. adapting the OAuth 
 
 The authorization flow, which <a href="./authflow.md">I describe in detail here</a>, forced me to consider the proper storage of an <code>auth_token</code> in a Remix project, which led me to Remix's fairly painless approach to cookie session storage.
 
-The multi-part Spotify API request, which <a href="./stepzen.md">I describe in detail here</a>, uses StepZen to transform Spotify's sprawling, multi-call REST sequences into concise, single-call GraphQL requests.
+The multi-part Spotify API request, which <a href="./stepzen.md">I describe in detail here</a>, uses StepZen to transform Spotify's elaborate, multi-call REST sequences into concise, single-call GraphQL requests. Using GraphQL pagination, fetching my 519-track diary of Liked Songs boils down to a simple <code>while</code> statement in my Remix Loader. 
