@@ -1,16 +1,9 @@
-## Spotify Liked Songs Export
-#### A Spotify Authorization Code flow using Remix and paginated GraphQL queries using StepZen.
-
 <p align="center">
   <img width="500" src="././images/login.png"/>  
 </p>
+## Spotify Liked Songs Export
+#### A Spotify Authorization Code flow using Remix and paginated GraphQL queries using StepZen.
 
-- **[How Portable Is Spotify?](overview.md): Exporting My Saved Music**
-
-
-  > I was disappointed to discover, when I tried to migrate my playlists to Tidal, that the free versions of both recommended transfer apps have 250-song restrictions–and the paid versions are subscription apps. Given a choice, I'd rather not enroll in a monthly subscription to a (likely) single-use app.
-
-<br/>
 
 <br/>
 
@@ -20,10 +13,10 @@
   
 </p>
 
-- **[A Spotify OAuth flow in Remix](authflow.md): Using CookieSessionStorage**
+- **[How Portable Is Spotify?](overview.md): Exporting My Saved Music**
 
 
-  > Where @materializer allows us to step through our API requests in implicit order, simply by descending through our type fields and back-filling secondary data, @sequence lets us step through API requests in explicit order. 
+  > I was disappointed to discover, when I tried to migrate my playlists to Tidal, that the free versions of both recommended transfer apps have 250-song restrictions–and the paid versions are subscription apps. Given a choice, I'd rather not enroll in a monthly subscription to a (likely) single-use app.
 
 
 <br/>
@@ -33,6 +26,43 @@
 </p>
 
 <br/>
+
+- **[A Spotify OAuth flow in Remix](authflow.md): Using CookieSessionStorage**
+
+
+  > Where @materializer allows us to step through our API requests in implicit order, simply by descending through our type fields and back-filling secondary data, @sequence lets us step through API requests in explicit order. 
+
+
+```graphql
+type Query {
+  get_saved_tracks(
+    access_token: String!
+    first: Int! = 50
+    after: String! = ""
+  ): TrackConnection
+    @rest(
+      endpoint: "https://api.spotify.com/v1/me/tracks?limit=$first&offset=$after"
+      headers: [{
+        name: "Authorization",
+        value: "Bearer $access_token"
+      }]
+      resultroot: "items[]"
+      pagination: {
+        type: OFFSET
+        setters: [{field:"total", path: "total"}]
+      }
+      setters: [
+        { field: "track_id", path: "track.id" }
+        { field: "track_name", path: "track.name" }
+        { field: "artist_id", path: "track.artists[].id" }
+        { field: "artist_name", path: "track.artists[].name" }
+        { field: "popularity", path: "track.popularity" }
+        { field: "preview_url", path: "track.preview_url" }
+        { field: "isrc", path: "track.external_ids.isrc" }
+      ]
+    )
+}
+```
 
 
 - **[Designing a Spotify GraphQL schema with StepZen](stepzen.md): Paginating results**
