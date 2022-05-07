@@ -1,4 +1,4 @@
-The first step in Spotify's Auth flow requires you to redirect the user to Spotify, after which Spotify will itself redirect with a code.
+The first step in Spotify's Auth flow requires you to redirect the user to Spotify, after which Spotify will redirect the user right back to you, along with a code. 
 
 ```js
 // remix > app > routes > login.tsx
@@ -14,7 +14,10 @@ export const loader: LoaderFunction = async ({
 }
 ```
 
-Text goes here. 
+We need to exchange the code Spotify sends back for an <code>access_token</code>, the first of several interactions we'll be typing and refining using StepZen.
+
+This step of authentication is the first (and only) that requires Basic Authentication, rather than the more commmon Bearer Authentication, and which 
+therefore demands a base64-encoded ID/password pair in its Authorization header, an invariant string value I store in my StepZen config.
 
 ```graphql
 // stepzen > spotify > spotify.graphql
@@ -44,7 +47,7 @@ type Query {
 }
 ```
 
-Text goes here.
+In the Loader for my <code>/callback</code>, I grab the <code>code</code> from the url and query an access token using the Fetch API.
 
 ```js
   // remix > app > routes > callback.tsx
@@ -73,7 +76,7 @@ Text goes here.
 ```
 
 
-Text goes here.
+That token is immediately extracted, set as a Cookie using <code>getSessions</code>, and persisted server-side using <code>commitSession</code>.
 
 ```js
   // remix > app > routes > callback.tsx
@@ -92,9 +95,7 @@ Text goes here.
     }
 ```
 
-
-Text goes here.
-
+Which will make the <code>access_token</code> subsequently available to the loader at my <code>/tracks</code> route, to which we can redirect immediately
 
 ```js
 // remix > app > routes > callback.tsx
