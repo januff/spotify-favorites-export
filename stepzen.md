@@ -1,4 +1,4 @@
-**Designing a Spotify GraphQL schema with StepZen: Paginating results**
+**Designing a Spotify GraphQL schema with StepZen: Depaginating results**
 
 Spotify returns an insane amount of basic track data, so it's useful to heavily pare it down ASAP, fir which transforming it to a compact GraphQL type using StepZen is a life-saver.
 
