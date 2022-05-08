@@ -56,7 +56,7 @@ type Query {
 }
 ```
 
-StepZen implements the GraphQL pagination spec, so by setting options as above (notice the required <code>TrackEdge</code> and <code>TrackConnection</code> types) we can hit our StepZen GraphQL endpoint using standard cursor syntax.
+StepZen implements the <a href="https://graphql.org/learn/pagination/">GraphQL pagination spec</a>, so by setting options as above (notice the required <code>TrackEdge</code> and <code>TrackConnection</code> types) we can hit our StepZen GraphQL endpoint using standard cursor syntax.
 
 
 ```js
