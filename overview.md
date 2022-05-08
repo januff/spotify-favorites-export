@@ -1,7 +1,7 @@
 ## How Portable My Spotify?
 ### Exporting My Saved Music
 
-During the recent Spotify protests, the ease with which one could transfer Spotify playlists to competing services came up a lot–but I was disappointed to discover, when I tried to migrate my playlists to Tidal, that the free versions of both recommended transfer apps have 250-song restrictions (and the paid versions require monthly subscriptions!) 
+During the recent Spotify protests, the ease with which one could transfer Spotify playlists to competing services came up a lot–but I was disappointed to discover, when I tried to migrate my playlists to Tidal, that the free versions of both recommended transfer apps have 250-song restrictions (and the paid versions are subscription apps, billed annually!)
 
 I'm not above dishing out a few bucks for the sake of convenience, but given my recent workouts with the Spotify API, I couldn't help but wonder: just how much less convenient would building a personal playlist exporter really be?
 
