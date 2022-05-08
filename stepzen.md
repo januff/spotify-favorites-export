@@ -1,6 +1,8 @@
 **Designing a Spotify GraphQL schema with StepZen: Paginating results**
 
-Text goes here.
+Spotify returns an insane amount of basic track data, so it's useful to heavily pare it down ASAP, fir which transforming it to a compact GraphQL type using StepZen is a life-saver.
+
+The most important data point from a data portability perspective is the ISRC: an International Standard Recording Code, which we can use to interface with Amazon Music, Apple Music, or any of the streaming services.
 
 ```graphql
 type Track {
@@ -54,7 +56,7 @@ type Query {
 }
 ```
 
-Text goes here.
+StepZen implements the GraphQL pagination spec, so by setting options as above (notice the required <code>TrackEdge</code> and <code>TrackConnection</code> types) we can hit our StepZen GraphQL endpoint using standard cursor syntax.
 
 
 ```js
@@ -107,8 +109,7 @@ export async function getTracks(token: String, cursor: String = '') {
 ```
 
 
-Text goes here.
-
+This proves immediately useful in the loader for our <code>/tracks</code> route, which uses a <code>while</code> statement to keep track of the returned <code>hasNextPage</code> boolean, until the request is fully depaginated.
 
 ```js
 // remix > app > routes > tracks.tsx
@@ -148,8 +149,7 @@ export const loader: LoaderFunction = async ({
 
 ```
 
-
-Text goes here
+Mass presentable on first load (if not yet design-presentable) and suitable for cross-API transferability.
 
 ```js
 // remix > app > routes > tracks.tsx
