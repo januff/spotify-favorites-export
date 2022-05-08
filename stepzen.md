@@ -1,6 +1,6 @@
 **Designing a Spotify GraphQL schema with StepZen: Depaginating results**
 
-Spotify returns an insane amount of basic track data, so it's useful to heavily pare it down ASAP, fir which transforming it to a compact GraphQL type using StepZen is a life-saver.
+Spotify returns an insane amount of basic track data, so whittling it down to a compact GraphQL type using StepZen is a life-saver.
 
 The most important data point from a data portability perspective is the ISRC: an International Standard Recording Code, which we can use to interface with Amazon Music, Apple Music, or any of the streaming services.
 
