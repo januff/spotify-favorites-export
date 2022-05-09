@@ -19,7 +19,7 @@ export const loader: LoaderFunction = async ({
 We need to exchange the code Spotify sends back for an <code>access_token</code>, the first of several interactions we'll be typing and refining using StepZen.
 
 This step of authentication is the first (and only) that requires Basic Authentication, rather than the more commmon Bearer Authentication, and which 
-therefore demands a base64-encoded ID/password pair in its Authorization header, an invariant string value I store in my StepZen config.
+therefore demands a base64-encoded ID/password pair in its Authorization header, an invariant string value I store in my StepZen config and summon as <code>$buffer</code>.
 
 ```graphql
 // stepzen > spotify > spotify.graphql
