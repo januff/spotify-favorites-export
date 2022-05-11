@@ -174,6 +174,8 @@ export default function Tracks() {
 }
 ```
 
+Comparing a massive playlist like this against multiple streaming music APIs: that'll be the subject of the next installment–and another apt showcase for StepZen's benefits, as our options for multi-API contributions to a GraphQL data model get *very interesting* (ie. potentially quota-busting, if not tuned carefully.) 
+
 <br/>
 
 <p align="center">
